@@ -1,4 +1,4 @@
-package songs;
+package weekone.wednesday.songs;
 
 import java.awt.*;
 import java.util.Scanner;
