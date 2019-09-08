@@ -10,85 +10,86 @@ public class HickoryDickoryDock {
     private void sing() {
         for (byte counter = 1; counter < 13; counter++) {
             System.out.println("Hickory Dickory Dock,");
-            String[] nextLines = getLines(counter);
-            System.out.println(nextLines[0]);
-            if(counter != 12) {
-                System.out.println("The clock struck " + counter);
-            }
-            else {
-                System.out.println("The clock struck noon");
-            }
-            System.out.println(nextLines[1]);
+            writeLines(counter);
             System.out.println("Hickory Dickory Dock.");
             System.out.println();
         }
     }
 
-    private String[] getLines(byte counter){
-
-        String[] lines = new String[2];
+    private void writeLines(byte counter){
 
         switch(counter){
 
             case 1:
-                lines[0] = "The mouse ran up the clock,";
-                lines[1] = "The mouse ran down,";
+                System.out.println("The mouse ran up the clock,");
+                System.out.println("The clock struck " + counter);
+                System.out.println("The mouse ran down,");
                 break;
 
             case 2:
-                lines[0] = "The bird looked at the clock,";
-                lines[1] = "Away she flew,";
+                System.out.println("The bird looked at the clock,");
+                System.out.println("The clock struck " + counter);
+                System.out.println("Away she flew,");
                 break;
 
             case 3:
-                lines[0] = "The dog barked at the clock,";
-                lines[1] = "Fiddle-de-dee,";
+                System.out.println("The dog barked at the clock,");
+                System.out.println("The clock struck " + counter);
+                System.out.println("Fiddle-de-dee,");
                 break;
 
             case 4:
-                lines[0] = "The bear slept by the clock,";
-                lines[1] = "He ran out of the door,";
+                System.out.println("The bear slept by the clock,");
+                System.out.println("The clock struck " + counter);
+                System.out.println("He ran out of the door,");
                 break;
 
             case 5:
-                lines[0] = "The bee buzzed around the clock,";
-                lines[1] = "She went to her hive,";
+                System.out.println("The bee buzzed around the clock,");
+                System.out.println("The clock struck " + counter);
+                System.out.println("She went to her hive,");
                 break;
 
             case 6:
-                lines[0] = "The hen pecked at the clock,";
-                lines[1] = "Oh fiddle sticks,";
+                System.out.println("The hen pecked at the clock,");
+                System.out.println("The clock struck " + counter);
+                System.out.println("Oh fiddle sticks,");
                 break;
 
             case 7:
-                lines[0] = "The cat ran around the clock,";
-                lines[1] = "She wanted to get'em,";
+                System.out.println("The cat ran around the clock,");
+                System.out.println("The clock struck " + counter);
+                System.out.println("She wanted to get'em,");
                 break;
 
             case 8:
-                lines[0] = "The horse jumped over the clock,";
-                lines[1] = "He ate some cake,";
+                System.out.println("The horse jumped over the clock,");
+                System.out.println("The clock struck " + counter);
+                System.out.println("He ate some cake,");
                 break;
 
             case 9:
-                lines[0] = "The cow danced on the clock,";
-                lines[1] = "She felt so fine,";
+                System.out.println("The cow danced on the clock,");
+                System.out.println("The clock struck " + counter);
+                System.out.println("She felt so fine,");
                 break;
 
             case 10:
-                lines[0] = "The pig oinked at the clock,";
-                lines[1] = "She did it again,";
+                System.out.println("The pig oinked at the clock,");
+                System.out.println("The clock struck " + counter);
+                System.out.println("She did it again,");
                 break;
 
             case 11:
-                lines[0] = "The duck quacked at the clock,";
-                lines[1] = "The duck said oh heavens,";
+                System.out.println("The duck quacked at the clock,");
+                System.out.println("The clock struck " + counter);
+                System.out.println("The duck said oh heavens,");
                 break;
             case 12:
-                lines[0] = "The mouse ran up the clock,";
-                lines[1] = "He's here to soon,";
+                System.out.println("The mouse ran up the clock,");
+                System.out.println("The clock struck noon");
+                System.out.println("He's here to soon,");
                 break;
         }
-        return lines;
     }
 }
