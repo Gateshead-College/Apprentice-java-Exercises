@@ -7,7 +7,7 @@ public class Dog {
     private byte age;
     private String breed;
 
-    public Dog(String name, String size, byte age, String breed) {
+    Dog(String name, String size, byte age, String breed) {
         this.name = name;
         this.size = size;
         this.age = age;
