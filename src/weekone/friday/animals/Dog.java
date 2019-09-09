@@ -35,9 +35,9 @@ public class Dog {
         } else if (breed.equalsIgnoreCase("Labrador")) {
             playing = "Yeah, Yeah, Throw the stick!, Yeah, DO IT!";
         }
-        else if(breed.equalsIgnoreCase("Border Collie")){
-            playing = "Lets go chase us some sheep!";
-        }
+       // else if(breed.equalsIgnoreCase("Border Collie")){
+       //     playing = "Lets go chase us some sheep!";
+      //  }
         return playing;
     }
 
