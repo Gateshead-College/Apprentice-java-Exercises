@@ -4,7 +4,6 @@ public class Cat {
     private String name;
     private String nature;
     private int age;
-    private String colour;
 
     Cat(String name, int age, String nature){
         this.name = name;
