@@ -6,13 +6,13 @@ public class Cat {
     private int age;
     private String colour;
 
-    public Cat(String name, int age, String nature){
+    Cat(String name, int age, String nature){
         this.name = name;
         this.age = age;
         this.nature = nature;
     }
 
-    public String stroke(int age){
+    String stroke(int age){
         String reaction;
         if(age <= 2){
             reaction = "Let's Play!";

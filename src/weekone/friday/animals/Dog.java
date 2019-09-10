@@ -8,7 +8,7 @@ public class Dog {
     private String breed;
     private String colour;
 
-    public Dog(String name, String size, byte age, String breed) {
+    Dog(String name, String size, byte age, String breed) {
         this.name = name;
         this.size = size;
         this.age = age;
@@ -23,9 +23,9 @@ public class Dog {
         else if(size.equalsIgnoreCase("medium")) {
             bark = "woof woof";
         }
-        else {
-            bark = "WOOF WOOF";
-        }
+       // else {
+        //    bark = "WOOF WOOF";
+        //}
         return bark;
     }
 
@@ -37,9 +37,9 @@ public class Dog {
         } else if (breed.equalsIgnoreCase("Labrador")) {
             playing = "Yeah, Yeah, Throw the stick!, Yeah, DO IT!";
         }
-        else if(breed.equalsIgnoreCase("Border Collie")){
-            playing = "Lets go chase us some sheep!";
-        }
+       // else if(breed.equalsIgnoreCase("Border Collie")){
+       //     playing = "Lets go chase us some sheep!";
+      //  }
         return playing;
     }
 
