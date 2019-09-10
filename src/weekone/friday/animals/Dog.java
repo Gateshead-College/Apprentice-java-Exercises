@@ -6,6 +6,7 @@ public class Dog {
     private String size;
     private byte age;
     private String breed;
+    private String colour;
 
     public Dog(String name, String size, byte age, String breed) {
         this.name = name;
