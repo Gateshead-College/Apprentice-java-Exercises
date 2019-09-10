@@ -19,7 +19,7 @@ public class Dog {
         if(size.equalsIgnoreCase("small")){
             bark = "yap yap yap";
         }
-        else if(size.equalsIgnoreCase("medium")){
+        else if(size.equalsIgnoreCase("medium")) {
             bark = "woof woof";
         }
         else {
@@ -29,6 +29,7 @@ public class Dog {
     }
 
     public String play(String breed) {
+
         String playing = ""; //Has to be initialised as we aren't assigning a value in every potential path
         if(breed.equalsIgnoreCase("Poodle")){
             playing = "Oh Dear, I don't think so, one could not possibly engage in such activities";

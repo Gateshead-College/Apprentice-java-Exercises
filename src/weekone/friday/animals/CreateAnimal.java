@@ -10,26 +10,6 @@ public class CreateAnimal {
         System.out.println("What animal would you like to create?");
         String animal = scn.nextLine();
 
-        /*switch(expression){
-            //case statements
-            //values must be of same type as expression
-            case value1:
-                //statements
-                break; //break is optional
-
-            case value2:
-                //statements
-                break; //optional
-
-            // We can have any number of case statements
-            // below is default statement, used when none of the cases is true.
-            // No break is needed in the default case.
-            default :
-                // Statements
-                //No break required
-        }*/
-
-
         switch(animal.toLowerCase()){
 
             case "dog":
@@ -51,7 +31,40 @@ public class CreateAnimal {
             default:
                 System.out.println(animal + " is not a type of animal we can currently create, please try again");
         }
+
+        boolean testing = false;
+
+
+
+        if(testing){
+            //do something is it is true
+        }
+
+        if(!testing){
+            //do something if it is false
+        }
+
     }
+
+    /*switch(expression){
+            //case statements
+            //values must be of same type as expression
+            case value1:
+                //statements
+                break; //break is optional
+
+            case value2:
+                //statements
+                break; //optional
+
+            // We can have any number of case statements
+            // below is default statement, used when none of the cases is true.
+            // No break is needed in the default case.
+            default :
+                // Statements
+                //No break required
+        }*/
+
 
     private void createFish() {
 
@@ -87,9 +100,9 @@ public class CreateAnimal {
         String breed = scn.nextLine();
         Dog myDog = new Dog(name, size, age, breed);
 
-        myDog.bark(size);
-        myDog.play(breed);
-        myDog.beHuman(name, age, breed);
+        System.out.println(myDog.bark(size));
+        System.out.println(myDog.play(breed));
+        System.out.println(myDog.beHuman(name, age, breed));
 
         getAnimalType();
     }
