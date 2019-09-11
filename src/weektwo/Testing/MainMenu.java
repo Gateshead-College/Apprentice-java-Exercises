@@ -25,36 +25,39 @@ public class MainMenu {
         if (pass.equals("Incorrect")) {
             for (int i = 0; i < 50; ++i) System.out.println();
             mm.incorrect();
-        }
-
-        for (int i = 0; i < 50; ++i) System.out.println();
-        System.out.println("////////////////////////////////////////");
-        System.out.println("/                                      /");
-        System.out.println("/                                      /");
-        System.out.println("/           Username Correct           /");
-        System.out.println("/                                      /");
-        System.out.println("/        What is your password?        /");
-        System.out.println("/            Case Sensitive            /");
-        System.out.println("/                                      /");
-        System.out.println("////////////////////////////////////////");
-        String uPass = sc.nextLine();
-        if (uPass.equals(pass)) {
-            for (int i = 0; i < 50; ++i) System.out.println();
-            System.out.println("/////////////////////////////////////////");
-            System.out.println("/                                       /");
-            System.out.println("/                                       /");
-            System.out.println("/            Password Correct           /");
-            System.out.println("/                                       /");
-            System.out.println("/           You have logged in          /");
-            System.out.println("/                                       /");
-            System.out.println("/                                       /");
-            System.out.println("/////////////////////////////////////////");
-            System.out.println(user);
-            Thread.sleep(2000);
-            mm.mainMenu(user);
-
         } else {
-            mm.incorrect();
+
+
+            for (int i = 0; i < 50; ++i) System.out.println();
+            System.out.println("////////////////////////////////////////");
+            System.out.println("/                                      /");
+            System.out.println("/                                      /");
+            System.out.println("/           Username Correct           /");
+            System.out.println("/                                      /");
+            System.out.println("/        What is your password?        /");
+            System.out.println("/            Case Sensitive            /");
+            System.out.println("/                                      /");
+            System.out.println("////////////////////////////////////////");
+            String uPass = sc.nextLine();
+
+            if (uPass.equals(pass)) {
+                for (int i = 0; i < 50; ++i) System.out.println();
+                System.out.println("/////////////////////////////////////////");
+                System.out.println("/                                       /");
+                System.out.println("/                                       /");
+                System.out.println("/            Password Correct           /");
+                System.out.println("/                                       /");
+                System.out.println("/           You have logged in          /");
+                System.out.println("/                                       /");
+                System.out.println("/                                       /");
+                System.out.println("/////////////////////////////////////////");
+                System.out.println(user);
+                Thread.sleep(2000);
+                mm.mainMenu(user);
+
+            } else {
+                mm.incorrect();
+            }
         }
 
 
@@ -64,7 +67,7 @@ public class MainMenu {
     private void mainMenu(String user) {
         for (int i = 0; i < 50; ++i) System.out.println();
         System.out.println("////////////////////////////////////////");
-        System.out.println("/ Welcome "+user+" to Ingram Bank    /");
+        System.out.println("/ Welcome " + user + " to Ingram Bank    /");
         System.out.println("/                                      /");
         System.out.println("/ Do you wish to:                      /");
         System.out.println("/ 1. View your account                 /");
@@ -80,7 +83,6 @@ public class MainMenu {
 
                 case 1:
 //                viewAccount();
-
                     break;
                 case 2:
 //                openAccount();
