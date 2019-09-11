@@ -14,7 +14,7 @@ public class MainMenu {
 
     }
 
-    private void mainMenu() {
+    public void mainMenu() {
         System.out.println("////////////////////////////////////////");
         System.out.println("/ Welcome to the mobile bank of Kieran /");
         System.out.println("/                                      /");
