@@ -7,64 +7,7 @@ public class MainMenu {
     Scanner sc = new Scanner(System.in);
     String user;
 
-    private void logIn() throws InterruptedException {
-        for (int i = 0; i < 50; ++i) System.out.println();
-        System.out.println("////////////////////////////////////////");
-        System.out.println("/ Welcome to the mobile bank of Kieran /");
-        System.out.println("/                                      /");
-        System.out.println("/   Please log in to your account!     /");
-        System.out.println("/                                      /");
-        System.out.println("/       What is your username?         /");
-        System.out.println("/                                      /");
-        System.out.println("/                                      /");
-        System.out.println("////////////////////////////////////////");
-        MainMenu mm = new MainMenu();
-        user = sc.nextLine();
-        Accounts acc = new Accounts();
-        String pass = acc.UserValid(user);
-        if (pass.equals("Incorrect")) {
-            for (int i = 0; i < 50; ++i) System.out.println();
-            mm.incorrect();
-        } else {
-
-
-            for (int i = 0; i < 50; ++i) System.out.println();
-            System.out.println("////////////////////////////////////////");
-            System.out.println("/                                      /");
-            System.out.println("/                                      /");
-            System.out.println("/           Username Correct           /");
-            System.out.println("/                                      /");
-            System.out.println("/        What is your password?        /");
-            System.out.println("/            Case Sensitive            /");
-            System.out.println("/                                      /");
-            System.out.println("////////////////////////////////////////");
-            String uPass = sc.nextLine();
-
-            if (uPass.equals(pass)) {
-                for (int i = 0; i < 50; ++i) System.out.println();
-                System.out.println("/////////////////////////////////////////");
-                System.out.println("/                                       /");
-                System.out.println("/                                       /");
-                System.out.println("/            Password Correct           /");
-                System.out.println("/                                       /");
-                System.out.println("/           You have logged in          /");
-                System.out.println("/                                       /");
-                System.out.println("/                                       /");
-                System.out.println("/////////////////////////////////////////");
-                System.out.println(user);
-                Thread.sleep(2000);
-                mm.mainMenu(user);
-
-            } else {
-                mm.incorrect();
-            }
-        }
-
-
-    }
-
-
-    private void mainMenu(String user) {
+    public void mainMenu(String user) {
         for (int i = 0; i < 50; ++i) System.out.println();
         System.out.println("////////////////////////////////////////");
         System.out.println("/ Welcome " + user + " to Ingram Bank    /");
@@ -85,7 +28,8 @@ public class MainMenu {
 //                viewAccount();
                     break;
                 case 2:
-//                openAccount();
+                    openAccount openAcc = new openAccount();
+                    openAcc.openAcc(user);
                     break;
 
                 case 3:
@@ -111,26 +55,10 @@ public class MainMenu {
 
     }
 
-    private void incorrect() throws InterruptedException {
-        for (int i = 0; i < 50; ++i) System.out.println();
-        System.out.println("/////////////////////////////////////////");
-        System.out.println("/                                       /");
-        System.out.println("/                                       /");
-        System.out.println("/              INCORRECT                /");
-        System.out.println("/           PLEASE TRY AGAIN            /");
-        System.out.println("/                                       /");
-        System.out.println("/                                       /");
-        System.out.println("/                                       /");
-        System.out.println("/////////////////////////////////////////");
-        Thread.sleep(2000);
-        MainMenu mm = new MainMenu();
-        mm.logIn();
-    }
-
 
     public static void main(String[] args) throws InterruptedException {
-        MainMenu mm = new MainMenu();
-        mm.logIn();
+        logIn lg = new logIn();
+        lg.login();
     }
 
 }
