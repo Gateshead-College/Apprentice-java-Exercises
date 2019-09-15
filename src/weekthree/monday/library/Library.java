@@ -9,6 +9,11 @@ public class Library {
     Member[] members = new Member[5];
     Loan[] loans = new Loan[2];
 
+    public static void main(String[] args) {
+        Library lib = new Library();
+        lib.initialise();
+    }
+
     private void initialise() {
         books[0] = new Book(1, "In Search of Lost Time", "Marcel Proust", "1913");
         books[1] = new Book(2, "Ulysses", "James Joyce", "1922");

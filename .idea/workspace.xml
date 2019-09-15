@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c566a7cf-283d-4fc5-9fa7-83de54b5a528" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/weekthree/monday/library/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/weekthree/monday/library/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/weekthree/monday/library/Loan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/weekthree/monday/library/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaApps/production/JavaApps/weekone/friday/animals/Cat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaApps/production/JavaApps/weekone/friday/animals/CreateAnimal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaApps/production/JavaApps/weekone/friday/animals/Dog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaApps/production/JavaApps/weekone/friday/songs/HickoryDickoryDock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaApps/production/JavaApps/weekone/wednesday/datatypes/Registration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaApps/production/JavaApps/weekone/wednesday/meinehunde/Dog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaApps/production/JavaApps/weekone/wednesday/meinehunde/Dogomatic3000.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaApps/production/JavaApps/weekone/wednesday/songs/BottleSong.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weekthree/monday/library/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weekthree/monday/library/Library.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/weekthree/monday/library/Library.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+            <state relative-caret-position="312">
+              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -189,18 +177,18 @@
       <workItem from="1567939482457" duration="693000" />
       <workItem from="1568037269491" duration="2183000" />
       <workItem from="1568111025649" duration="1716000" />
-      <workItem from="1568555702441" duration="5505000" />
+      <workItem from="1568555702441" duration="5646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6552000" />
+    <option name="totallyTimeSpent" value="6693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -215,7 +203,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4989339" visible="true" weight="0.2173913" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4989339" visible="true" weight="0.2173913" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5010661" side_tool="true" weight="0.35451505" />
       <window_info anchor="bottom" id="Messages" order="10" />
@@ -307,8 +295,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/weekthree/monday/library/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+        <state relative-caret-position="312">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
         </state>
       </provider>
     </entry>
