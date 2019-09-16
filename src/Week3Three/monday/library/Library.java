@@ -33,7 +33,42 @@ public class Library {
         System.out.println("2. Check book availability");
         System.out.println("3. Search for books via author");
         byte choice = Byte.parseByte((sc.nextLine()));
-        //handleChoice(choice);
+        handleChoice(choice);
+    }
+
+    private void handleChoice(byte choice) {
+        switch(choice){
+            case 1:
+                searchBook();
+                break;
+            case 2:
+                checkBook();
+                break;
+            case 3:
+                searchAuthor();
+                break;
+            default:
+                System.out.println("Please enter a valid number");
+                menu();
+        }
+
+    }
+
+    private void searchBook() {
+        System.out.println("Which book? ");
+        String title = sc.nextLine();
+
+        for(int i = 0; i< books.length; i++){
+            if (books[i].bookTitle.equalsIgnoreCase(title)){
+                System.out.println("We have that book in the library");
+                System.out.println("Please go to the menu to check if its available");
+                menu();
+            }
+            else if (i == books.length - 1){
+                System.out.println("Sorry we dont have that book");
+                menu();
+            }
+        }
     }
 
 
