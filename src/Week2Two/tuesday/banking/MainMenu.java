@@ -1,8 +1,5 @@
-package weektwo.tuesday.banking;
+package Week2Two.tuesday.banking;
 
-import javafx.scene.chart.ScatterChart;
-
-import java.beans.Expression;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

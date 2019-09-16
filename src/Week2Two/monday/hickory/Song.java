@@ -1,4 +1,4 @@
-package weektwo.monday.hickory;
+package Week2Two.monday.hickory;
 
 public class Song {
     String word;

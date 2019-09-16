@@ -1,6 +1,5 @@
-package weekone.friday.animals;
+package Week1One;
 // Import the scanner to use it
-import javax.security.auth.login.CredentialException;
 import java.util.Scanner;
 
 public class CreateAnimal {

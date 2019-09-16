@@ -1,4 +1,4 @@
-package weektwo.Testing;
+package Week2Two.Testing;
 
 public class openAccount {
 

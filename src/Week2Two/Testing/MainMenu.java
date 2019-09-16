@@ -1,4 +1,4 @@
-package weektwo.Testing;
+package Week2Two.Testing;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

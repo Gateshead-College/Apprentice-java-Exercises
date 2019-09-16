@@ -1,6 +1,4 @@
-package weektwo.tuesday.banking;
-
-import com.sun.tools.javac.Main;
+package Week2Two.tuesday.banking;
 
 import java.util.Scanner;
 

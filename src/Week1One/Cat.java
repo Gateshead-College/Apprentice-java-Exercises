@@ -1,43 +1,42 @@
-package weekone.friday.animals;
+package Week1One;
 
-class Dog {
+class Cat {
     private String name;
     private String size;
     private String breed;
     private int age;
 
-    Dog(String name, String size, String breed, int age) {
+    Cat(String name, String size, String breed, int age) {
         this.name = name;
         this.size = size;
         this.breed = breed;
         this.age = age;
     }
 
-    String bark(String size) {
-        String bark;
+    String meow(String size) {
+        String meow;
         if ((size.equalsIgnoreCase("small"))) {
-            bark = "Yap Yap Yap";
+            meow = "Purrr Purrrr Purrrr";
         } else if ((size.equalsIgnoreCase("medium"))) {
-            bark = "woof woof";
+            meow = "Meow Meow";
         } else {
-            bark = "WOOF WOOF";
+            meow = "HEFFA MEOW";
         }
 
-        return bark;
+        return meow;
     }
 
     String play(String size) {
         String playing;
-        if ((breed.equalsIgnoreCase("Poodle"))) {
-            playing = "Fancy_Response";
-        } else if ((breed.equalsIgnoreCase("Labrador"))) {
-            playing = "Energetic_Response";
-        } else if ((breed.equalsIgnoreCase("Border Collie"))) {
-            playing = "Sheep_Response";
+        if ((breed.equalsIgnoreCase("Sphynx"))) {
+            playing = "Weird_Cat_No_Hair";
+        } else if ((breed.equalsIgnoreCase("Siamese"))) {
+            playing = "Expensive_Response";
+        } else if ((breed.equalsIgnoreCase("House"))) {
+            playing = "Normal_Response";
         } else {
-            playing = "Not_A_Dog_Response";
+            playing = "Not_A_Cat_Response";
         }
-
 
         return playing;
     }
@@ -45,21 +44,16 @@ class Dog {
     String status(int age) {
         String status;
         if (age < (1)) {
-            status = "a puppy!!";
+            status = "a kitten!!";
         } else if ((age >= (2)) && (age < (4))){
             status = "middle aged";
         } else if ((age >= (5)) && (age < (8))) {
             status = "olddddddddddd";
         } else {
-            status = "Dead.... Your Dog Is Dead";
+            status = "Dead.... Your Cat Is Dead";
         }
 
 
         return status;
     }
-
-   
-
-
-
 }
