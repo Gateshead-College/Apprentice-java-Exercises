@@ -5,15 +5,12 @@ import java.util.Scanner;
 
 public class MainMenu {
     Scanner sc = new Scanner(System.in);
+    String user;
 
-    private void logIn() {
-
-
-    }
-
-    public void mainMenu() {
+    public void mainMenu(String user) {
+        for (int i = 0; i < 50; ++i) System.out.println();
         System.out.println("////////////////////////////////////////");
-        System.out.println("/ Welcome to the mobile bank of Kieran /");
+        System.out.println("/ Welcome " + user + " to Ingram Bank    /");
         System.out.println("/                                      /");
         System.out.println("/ Do you wish to:                      /");
         System.out.println("/ 1. View your account                 /");
@@ -29,10 +26,10 @@ public class MainMenu {
 
                 case 1:
 //                viewAccount();
-
                     break;
                 case 2:
-//                openAccount();
+                    openAccount openAcc = new openAccount();
+                    openAcc.openAcc(user);
                     break;
 
                 case 3:
@@ -46,18 +43,22 @@ public class MainMenu {
                 default:
                     MainMenu mainmenu = new MainMenu();
                     System.out.println("Please select 1, 2, 3, or 4!!");
-                    mainmenu.mainMenu();
+                    for (int i = 0; i < 50; ++i) System.out.println();
+                    mainmenu.mainMenu(user);
             }
         } catch (InputMismatchException e) {
             MainMenu mainmenu = new MainMenu();
             System.out.println("Please select 1, 2, 3, or 4!!");
-            mainmenu.mainMenu();
+            for (int i = 0; i < 50; ++i) System.out.println();
+            mainmenu.mainMenu(user);
         }
 
     }
 
-    public static void main(String[] args) {
-        MainMenu mainmenu = new MainMenu();
-        mainmenu.mainMenu();
+
+    public static void main(String[] args) throws InterruptedException {
+        logIn lg = new logIn();
+        lg.login();
     }
+
 }
