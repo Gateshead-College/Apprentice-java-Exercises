@@ -1,5 +1,6 @@
 package weekthree.tuesday.constructors;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class createUser {
@@ -13,9 +14,8 @@ public class createUser {
         System.out.println("Please enter your age:");
         String line = scn.nextLine();
         byte age = 0;
-        if(line != null || !line.equals("")){
+        if(!line.equals("")){
             age = Byte.parseByte(line);
-            System.out.println(line);
         }
         System.out.println("Please enter your forename:");
         String FN = scn.nextLine();
@@ -39,6 +39,7 @@ public class createUser {
             User u = new User (UN, PW, PN, gender);
             System.out.println(u.returnData());
         }
+        JOptionPane.showMessageDialog(null, "akhgk");
 
     }
 
