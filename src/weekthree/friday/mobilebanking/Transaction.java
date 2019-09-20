@@ -3,12 +3,12 @@ package weekthree.friday.mobilebanking;
 public class Transaction {
 
     private String transactionDate;
-    private String transactionperson;
+    private String transactionPerson;
     private double transactionAmount;
 
-    public Transaction(String transactionDate, String transactionperson, double transactionAmount) {
+    public Transaction(String transactionDate, String transactionPerson, double transactionAmount) {
         this.transactionDate = transactionDate;
-        this.transactionperson = transactionperson;
+        this.transactionPerson = transactionPerson;
         this.transactionAmount = transactionAmount;
     }
 
@@ -21,11 +21,11 @@ public class Transaction {
     }
 
     public String getTransactionperson() {
-        return transactionperson;
+        return transactionPerson;
     }
 
     public void setTransactionperson(String transactionperson) {
-        this.transactionperson = transactionperson;
+        this.transactionPerson = transactionperson;
     }
 
     public double getTransactionAmount() {

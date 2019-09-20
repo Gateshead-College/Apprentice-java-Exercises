@@ -9,11 +9,12 @@ public class User {
     private String surname;
     private ArrayList<Account> accounts;
 
-    public User(String username, String password, String forename, String surname) {
+    public User(String username, String password, String forename, String surname, ArrayList<Account> accounts) {
         this.username = username;
         this.password = password;
         this.forename = forename;
         this.surname = surname;
+        this.accounts = accounts;
     }
 
     public String getUsername() {
@@ -55,6 +56,4 @@ public class User {
     public void setAccounts(ArrayList<Account> accounts) {
         this.accounts = accounts;
     }
-
-
 }
