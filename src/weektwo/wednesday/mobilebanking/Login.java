@@ -1,5 +1,10 @@
 package weektwo.wednesday.mobilebanking;
 
+
+import com.sun.tools.javac.Main;
+
+import java.util.Scanner;
+
 public class Login {
 
     /*
@@ -8,25 +13,53 @@ public class Login {
     collection of User objects (All users)
     new scanner object
      */
+    String username;
+    String password;
+    User[] users = new User[10];
+    Scanner scn = new Scanner(System.in);
 
-    //Login user -->
-    //Ask user for their username
-    //store username entered in username variable
-    //Ask the user for their password
-    //store the password in the password variable
-    //Check the username against each of the --> cont...
-            //User objects until there is a match
+    public static void main(String[] args) {
+        Login login = new Login();
+        login.userLogin();
+    }
+
+    private void userLogin(){
+        //Ask user for their username
+        System.out.println("Please enter your username");
+        //store username entered in username variable
+        username = scn.nextLine();
+        //Ask the user for their password
+        System.out.println("Please enter your password");
+        //store the password in the password variable
+        password = scn.nextLine();
+        //Check the username against each of the --> cont...
+        //User objects until there is a match
         //if there is a match
-        //Check if the password entered matches the password
-                //tied to the account with the username
-                //openMenu();
-            //prompt - Password is incorrect
-                //loginUser()
-        //prompt - Username is incorrect
-            //loginUser()
+        if(username.equals("Deano")) {
+            //Check if the password entered matches the password
+            //tied to the account with the username
+            if(password.equals("5trongP@ssword")) {
+                openMenu();
+            }
+        }
+        else {
+            System.out.println("Incorrect username and/or password provided");
+        }
+        //userLogin - Rerun method
+        userLogin();
+    }
+
+    private void openMenu() {
+        //create a new instance of the MainMenu class
+        MainMenu mm = new MainMenu();
+        mm.user = username;
+        //call method from MainMenu that displays the menu
+        mm.displayMenu();
+    }
 
 
     //open menu -->
-    //create a new instance of the MainMenu class
-    //call method from MainMenu that displays the menu
+
+
+
 }
