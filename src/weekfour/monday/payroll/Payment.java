@@ -8,6 +8,7 @@ public class Payment {
     private double paymentGross;
     private double paymentNet;
     private double paymentTax;
+    private double paymentNI;
 
     public Payment(Date paymentDate, double paymentGross, double paymentNet, double paymentTax, double paymentNI) {
         this.paymentDate = paymentDate;
@@ -56,6 +57,4 @@ public class Payment {
     public void setPaymentNI(double paymentNI) {
         this.paymentNI = paymentNI;
     }
-
-    private double paymentNI;
 }
