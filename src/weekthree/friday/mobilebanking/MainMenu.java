@@ -24,8 +24,7 @@ public class MainMenu {
         String choice = scn.nextLine();
         if (choice.equalsIgnoreCase("y")) {
             openAccount();
-        }
-        else {
+        } else {
             newCustomer();
         }
     }
@@ -39,10 +38,10 @@ public class MainMenu {
         int choice = Integer.parseInt(scn.nextLine());
         String accType = "";
 
-        switch(choice){
+        switch (choice) {
             case 1:
-              accType = "Current";
-              break;
+                accType = "Current";
+                break;
 
             case 2:
                 accType = "Standard Savings";
@@ -50,6 +49,7 @@ public class MainMenu {
 
             case 3:
                 accType = "ISA";
+                break;
 
             case 4:
                 accType = "Credit";
@@ -63,7 +63,7 @@ public class MainMenu {
         double initialBalance = 0;
         System.out.println("Would you like to make an initial deposit to your new account? (y/n)");
         String response = scn.nextLine();
-        if(response.equalsIgnoreCase("y")){
+        if (response.equalsIgnoreCase("y")) {
             System.out.println("How much would you like to deposit?");
             initialBalance = Double.parseDouble(scn.nextLine());
         }
@@ -118,7 +118,7 @@ public class MainMenu {
     private void closeAccount() {
         System.out.println("Sorry to hear you would like to close your account");
         Account accountToClose;
-        if(user.getAccounts().size() > 1) {
+        if (user.getAccounts().size() > 1) {
             System.out.println("Please select from the list below the account you would like to close:");
             int counter = 1;
             for (Account a : user.getAccounts()) {
@@ -127,24 +127,22 @@ public class MainMenu {
             }
             int choice = Integer.parseInt(scn.nextLine());
             accountToClose = user.getAccounts().get(choice - 1);
-        }
-        else {
+        } else {
             accountToClose = user.getAccounts().get(0);
         }
-        if(accountToClose.getAccountBalance() > 0){
+        if (accountToClose.getAccountBalance() > 0) {
             System.out.println("This account currently has a balance of " + accountToClose.getAccountBalance());
             System.out.println("Are you sure you want to close it? Any money in the account will be lost(y/n)");
             String choice = scn.nextLine();
-            if(choice.equalsIgnoreCase("y")){
+            if (choice.equalsIgnoreCase("y")) {
                 ArrayList<Account> accs = user.getAccounts();
                 accs.remove(accountToClose);
                 user.setAccounts(accs);
             }
             System.out.println("Account has been closed");
-            if(user.getAccounts().size() > 0){
+            if (user.getAccounts().size() > 0) {
                 displayMenu(user);
-            }
-            else {
+            } else {
                 newCustomer();
             }
         }
@@ -165,7 +163,6 @@ public class MainMenu {
         }
     }
 
-    //Need to add a check if the user has more than one account for the transfer option.
     private void accountMenu(Account account) {
         System.out.println("Please select an option: ");
         System.out.println("1 - View account balance");
@@ -176,7 +173,7 @@ public class MainMenu {
         System.out.println("0 - Return to previous menu");
 
         int choice = Integer.parseInt(scn.nextLine());
-        switch(choice){
+        switch (choice) {
             case 1:
                 viewBalance(account);
                 break;
@@ -201,45 +198,42 @@ public class MainMenu {
 
     private void transferFunds(Account account) {
         Account destinationAccount;
-        ArrayList<Account> availableAccounts = user.getAccounts();
+        ArrayList<Account> availableAccounts = new ArrayList<>();
+        availableAccounts.addAll(user.getAccounts());
         availableAccounts.remove(account);
-        if(user.getAccounts().size() > 2){
+        if (user.getAccounts().size() > 2) {
             System.out.println("Please select the account you wish to send money too from the list below:");
             int counter = 1;
-            for(Account a : user.getAccounts()){
-                    System.out.println(counter + " - " + a.getAccountType() + " account");
+            for (Account a : user.getAccounts()) {
+                System.out.println(counter + " - " + a.getAccountType() + " account");
             }
             int choice = Integer.parseInt(scn.nextLine());
             destinationAccount = availableAccounts.get(choice - 1);
-        }
-        else {
+        } else {
             destinationAccount = availableAccounts.get(0);
         }
         System.out.println("How much would you like to transfer?");
         double amount = Double.parseDouble(scn.nextLine());
-        if(amount <= account.getAccountBalance()){
+        if (amount <= account.getAccountBalance()) {
             account.setAccountBalance(account.getAccountBalance() - amount);
             destinationAccount.setAccountBalance(destinationAccount.getAccountBalance() + amount);
             System.out.println("Successfully transferred £" + amount + " from " + account.getAccountType() + " account to " +
                     destinationAccount.getAccountType() + " account");
             accountMenu(account);
-        }
-        else {
+        } else {
             System.out.println("Insufficient funds to complete transfer");
             accountMenu(account);
         }
     }
 
     private void viewTransactions(Account a) {
-        if(a.getTransactions().size() > 0){
-            for(Transaction t : a.getTransactions()){
+        if (a.getTransactions().size() > 0) {
+            for (Transaction t : a.getTransactions()) {
                 System.out.println(t.getTransactionDate() + "    " +
-                        t.getTransactionperson() + "    "  +
+                        t.getTransactionperson() + "    " +
                         t.getTransactionAmount());
             }
-        }
-        else
-        {
+        } else {
             System.out.println("No transaction history to show!");
             accountMenu(a);
         }
@@ -247,8 +241,8 @@ public class MainMenu {
 
     private void viewBalance(Account account) {
         System.out.println("Account: " + account.getAccountType() + "\n" +
-                            "Account Number: " + account.getAccountNumber() + "\n" +
-                            "Account Balance: £" + account.getAccountBalance());
+                "Account Number: " + account.getAccountNumber() + "\n" +
+                "Account Balance: £" + account.getAccountBalance());
 
         accountMenu(account);
     }
