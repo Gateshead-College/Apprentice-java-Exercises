@@ -40,6 +40,7 @@ public class Login {
             }
             counter++;
         }
+        userLogin();
     }
 
     private void openMenu(User user) {

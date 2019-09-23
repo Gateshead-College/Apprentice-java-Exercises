@@ -13,6 +13,7 @@ public class Account {
         this.accountNumber = accountNumber;
         this.accountBalance = accountBalance;
         this.accountType = accountType;
+        this.transactions = new ArrayList<>();
     }
 
     public int getAccountNumber() {
