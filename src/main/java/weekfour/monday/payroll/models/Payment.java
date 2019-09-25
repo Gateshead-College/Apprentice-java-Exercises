@@ -1,28 +1,25 @@
-package weekfour.monday.payroll;
+package weekfour.monday.payroll.models;
 
 import java.util.Date;
 
 public class Payment {
 
-    private Date paymentDate;
+    private String paymentDate;
     private double paymentGross;
     private double paymentNet;
     private double paymentTax;
     private double paymentNI;
 
-    public Payment(Date paymentDate, double paymentGross, double paymentNet, double paymentTax, double paymentNI) {
+    public Payment(String paymentDate, double paymentGross) {
         this.paymentDate = paymentDate;
         this.paymentGross = paymentGross;
-        this.paymentNet = paymentNet;
-        this.paymentTax = paymentTax;
-        this.paymentNI = paymentNI;
     }
 
-    public Date getPaymentDate() {
+    public String getPaymentDate() {
         return paymentDate;
     }
 
-    public void setPaymentDate(Date paymentDate) {
+    public void setPaymentDate(String paymentDate) {
         this.paymentDate = paymentDate;
     }
 

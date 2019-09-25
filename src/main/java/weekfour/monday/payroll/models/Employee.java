@@ -1,4 +1,4 @@
-package weekfour.monday.payroll;
+package weekfour.monday.payroll.models;
 
 import java.util.ArrayList;
 
@@ -13,17 +13,57 @@ public class Employee {
     private ArrayList<Payment> payments;
     private ArrayList<Holiday> holidays;
     private String username;
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public float getRateOfPay() {
+        return rateOfPay;
+    }
+
     private String password;
+    private boolean isAdmin;
+    private float rateOfPay;
+
 
     public Employee(String employeeForename, String employeeSurname, String employeePosition, int contractedHours, String username, String password) {
         this.employeeForename = employeeForename;
         this.employeeSurname = employeeSurname;
         this.employeePosition = employeePosition;
-        //this.employeeRateOfPay = calculateRateOfPay();
         this.contractedHours = contractedHours;
-        //this.holidayEntitlement = calculateHolidayEntitlement();
         this.username = username;
         this.password = password;
+        payments = new ArrayList<>();
+        holidays = new ArrayList<>();
+
+        switch (employeePosition.toLowerCase()){
+            case "md":
+                isAdmin = true;
+                rateOfPay = 50.08f;
+                break;
+            case "hr":
+                isAdmin = true;
+                rateOfPay = 25.12f;
+                break;
+            case "pr":
+                isAdmin = true;
+                rateOfPay = 17.43f;
+                break;
+            default:
+                isAdmin = false;
+                rateOfPay = 12.87f;
+        }
+
+        if(contractedHours <= 20){
+            holidayEntitlement = 10;
+        }
+        else if(contractedHours > 20 && contractedHours <= 30){
+            holidayEntitlement = 15;
+        }
+        else {
+            holidayEntitlement = 20;
+        }
     }
 
     public String getEmployeeForename() {

@@ -1,11 +1,11 @@
-package weekfour.monday.payroll;
+package weekfour.monday.payroll.models;
 
 import java.util.Date;
 
 public class Holiday {
 
-    private Date holidayStartDate;
-    private Date holidayEndDate;
+    private String holidayStartDate;
+    private String holidayEndDate;
 
     /*Holiday duration should be calculated using the dates provided by the user.
     if the user does not have enough holidays remaining, they should be prompted to start again.
@@ -14,19 +14,19 @@ public class Holiday {
     private int holidayDuration;
     private boolean authorised;
 
-    public Date getHolidayStartDate() {
+    public String getHolidayStartDate() {
         return holidayStartDate;
     }
 
-    public void setHolidayStartDate(Date holidayStartDate) {
+    public void setHolidayStartDate(String holidayStartDate) {
         this.holidayStartDate = holidayStartDate;
     }
 
-    public Date getHolidayEndDate() {
+    public String getHolidayEndDate() {
         return holidayEndDate;
     }
 
-    public void setHolidayEndDate(Date holidayEndDate) {
+    public void setHolidayEndDate(String holidayEndDate) {
         this.holidayEndDate = holidayEndDate;
     }
 
@@ -46,7 +46,7 @@ public class Holiday {
         this.authorised = authorised;
     }
 
-    public Holiday(Date holidayStartDate, Date holidayEndDate, int holidayDuration) {
+    public Holiday(String holidayStartDate, String holidayEndDate, int holidayDuration) {
         this.holidayStartDate = holidayStartDate;
         this.holidayEndDate = holidayEndDate;
         this.holidayDuration = holidayDuration;

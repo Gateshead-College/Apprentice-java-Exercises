@@ -1,8 +1,5 @@
 package weektwo.wednesday.mobilebanking;
 
-
-import com.sun.tools.javac.Main;
-
 import java.util.Scanner;
 
 public class Login {
