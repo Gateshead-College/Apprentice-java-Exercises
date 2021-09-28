@@ -39,6 +39,13 @@ public class AccountActionsMenu {
         return Double.parseDouble(new Scanner(System.in).nextLine());
     }
 
+    public static void displayTransactions(ArrayList<String> transactions) {
+        System.out.println("Please see all transactions listed below:");
+        for(String s : transactions){
+            System.out.println(s);
+        }
+    }
+
     //Close Account
 
     //Change account name

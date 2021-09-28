@@ -1,26 +1,35 @@
 package projects.friday.mobile_banking.models;
 
+import java.time.LocalDate;
+
 public class Transaction {
 
-    private String transactionDate;
-    private String transactionPerson;
+    private LocalDate transactionDate;
+    private String transactionParty;
     private double transactionAmount;
+    private double newBalance;
 
-    public Transaction(String transactionDate, String transactionPerson, double transactionAmount) {
+    public Transaction(LocalDate transactionDate, String transactionParty, double transactionAmount, double newBalance) {
         this.transactionDate = transactionDate;
-        this.transactionPerson = transactionPerson;
+        this.transactionParty = transactionParty;
         this.transactionAmount = transactionAmount;
+        this.newBalance = newBalance;
     }
 
-    public String getTransactionDate() {
+    public LocalDate getTransactionDate() {
         return transactionDate;
     }
 
-    public String getTransactionperson() {
-        return transactionPerson;
+    public String getTransactionParty() {
+        return transactionParty;
     }
 
     public double getTransactionAmount() {
         return transactionAmount;
+    }
+
+    @Override
+    public String toString() {
+        return transactionDate + "    -    " + transactionParty + "    -    " + transactionAmount + "    -    " + newBalance;
     }
 }

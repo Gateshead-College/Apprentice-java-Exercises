@@ -1,10 +1,14 @@
 package projects.friday.mobile_banking.controllers;
 
+import org.joda.time.DateTime;
 import projects.friday.mobile_banking.models.Account;
+import projects.friday.mobile_banking.models.Transaction;
 import projects.friday.mobile_banking.models.User;
 import projects.friday.mobile_banking.views.AccountActionsMenu;
 import projects.friday.mobile_banking.views.AccountMenu;
 
+import java.sql.Time;
+import java.time.LocalDate;
 import java.util.ArrayList;
 public class AccountActionsController {
 
@@ -64,7 +68,7 @@ public class AccountActionsController {
             case 1: AccountActionsMenu.viewBalance(selectedAccount.getAccountBalance());
             break;
 
-            case 2: //view transactions
+            case 2: viewTransactions(selectedAccount);
                 break;
 
             case 3: if(transferFunds(selectedAccount)){
@@ -81,6 +85,14 @@ public class AccountActionsController {
             case 5: //Close Account
                 break;
         }
+    }
+
+    private static void viewTransactions(Account selectedAccount) {
+        ArrayList<String> transactions = new ArrayList<>();
+        for(Transaction t : selectedAccount.getTransactions()){
+            transactions.add(t.toString());
+        }
+        AccountActionsMenu.displayTransactions(transactions);
     }
 
     public static boolean transferFunds(Account sourceAccount){
@@ -107,7 +119,11 @@ public class AccountActionsController {
         if(sourceAccount.getAccountBalance() >= amount){
             //they have enough wonga
             sourceAccount.setAccountBalance(sourceAccount.getAccountBalance() - amount);
+            sourceAccount.addTransaction(new Transaction(LocalDate.now(), destinationAccount.getAccountName(),
+                    amount * -1, sourceAccount.getAccountBalance()));
             destinationAccount.setAccountBalance(destinationAccount.getAccountBalance() + amount);
+            destinationAccount.addTransaction(new Transaction(LocalDate.now(), sourceAccount.getAccountName(),
+                    amount, destinationAccount.getAccountBalance()));
             return true;
         }
         else {
