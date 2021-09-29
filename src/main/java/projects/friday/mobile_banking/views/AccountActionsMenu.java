@@ -46,6 +46,16 @@ public class AccountActionsMenu {
         }
     }
 
+    public static String getNewAccountName(String accountName) {
+        System.out.println("The selected account is currently called " + accountName);
+        System.out.println("Would you like to rename this account now?");
+        if(new Scanner(System.in).nextLine().equals("y")){
+            System.out.println("Please enter the new name for the account:");
+            return new Scanner(System.in).nextLine();
+        }
+        return null;
+    }
+
     //Close Account
 
     //Change account name

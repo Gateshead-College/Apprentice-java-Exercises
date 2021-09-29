@@ -6,10 +6,8 @@ public class Account {
 
     private String accountName;
     private double accountBalance;
-    private String accountType;
+    private final String accountType;
     private ArrayList<Transaction> transactions;
-
-
 
     public Account(String accountName, double accountBalance, String accountType) {
         this.accountName = accountName;

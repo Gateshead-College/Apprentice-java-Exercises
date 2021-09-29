@@ -1,13 +1,11 @@
 package projects.friday.mobile_banking.controllers;
 
-import org.joda.time.DateTime;
 import projects.friday.mobile_banking.models.Account;
 import projects.friday.mobile_banking.models.Transaction;
 import projects.friday.mobile_banking.models.User;
 import projects.friday.mobile_banking.views.AccountActionsMenu;
 import projects.friday.mobile_banking.views.AccountMenu;
 
-import java.sql.Time;
 import java.time.LocalDate;
 import java.util.ArrayList;
 public class AccountActionsController {
@@ -78,13 +76,26 @@ public class AccountActionsController {
                 System.out.println("Transfer failed, please try again");
             }
                 break;
-
-            case 4: //Rename Account
+            case 4: if(renameAccount(selectedAccount)){
+                System.out.println("Account renamed successfully");
+            }
+            else {
+                System.out.println("The account name can't be updated at the moment, please try again later.");
+            }
                 break;
 
             case 5: //Close Account
                 break;
         }
+    }
+
+    private static boolean renameAccount(Account selectedAccount) {
+        String newName = AccountActionsMenu.getNewAccountName(selectedAccount.getAccountName());
+        if(newName != null){
+            selectedAccount.setAccountName(newName);
+            return true;
+        }
+        return false;
     }
 
     private static void viewTransactions(Account selectedAccount) {

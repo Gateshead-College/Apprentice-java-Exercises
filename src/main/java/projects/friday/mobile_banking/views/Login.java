@@ -1,5 +1,6 @@
 package projects.friday.mobile_banking.views;
 
+import projects.friday.mobile_banking.controllers.InitDB;
 import projects.friday.mobile_banking.controllers.LoginController;
 import projects.friday.mobile_banking.models.User;
 
@@ -13,6 +14,8 @@ public class Login {
 
     //Main method - starting point for the program
     public static void main(String[] args) {
+        InitDB.initialiseDB();
+        //database startup
         //Create a new Login object and store it in the variable 'login'
         Login login = new Login();
         //Infinite loop to keep the program running
